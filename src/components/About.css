@@ -1,19 +1,23 @@
+/* About Section Styles */
 .about-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 50px;
+    min-height: calc(100vh - 80px); /* Adjust to fit below the header */
+    padding: 20px; /* Adjusted padding */
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(30,30,30,1) 100%);
     position: relative;
     overflow: hidden;
     animation: slideInFromTop 1s ease-out;
+    padding-top: 80px; /* Ensure padding-top is sufficient for mobile */
   }
   
+  /* About Container Styles */
   .about-container {
     display: flex;
+    flex-direction: column; /* Ensure column layout on smaller screens */
     align-items: center;
-    max-width: 1200px;
+    max-width: 90%; /* Ensure the container fits well on smaller screens */
     margin: 0 auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -23,32 +27,67 @@
     backdrop-filter: blur(10px);
   }
   
+  /* Profile Picture Styles */
   .profile-pic {
     border-radius: 50%;
-    width: 180px; /* Increased size */
-    height: 180px; /* Increased size */
-    margin-right: 20px;
+    width: 180px; /* Size for larger screens */
+    height: 180px; /* Size for larger screens */
+    margin-bottom: 20px; /* Margin adjustment for better spacing */
     transition: transform 0.3s ease;
     border: 5px solid #00f9ff;
     animation: pulse 2s infinite;
   }
   
+  /* Profile Picture Hover Effect */
   .profile-pic:hover {
     transform: scale(1.3) rotate(10deg); /* Increased scale */
   }
   
+  /* About Text Styles */
   .about-text h2 {
     margin-bottom: 20px;
     color: #ff007f;
-    font-size: 2.2em;
+    font-size: 2.2em; /* Adjust for larger screens */
     font-family: 'Press Start 2P', cursive;
     animation: bounceIn 1s ease-out;
   }
   
+  /* About Text Paragraph Styles */
   .about-text p {
-    max-width: 600px;
+    max-width: 100%; /* Ensure text fits within container */
     font-size: 1.2em;
     line-height: 1.6;
     color: #e0e0e0;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 20px;
+      padding-top: 70px; /* Adjust padding-top to accommodate smaller header */
+      min-height: calc(100vh - 60px); /* Ensure content fits below the header */
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-container {
+      width: 100%;
+      max-width: none; /* Remove max-width constraint for small screens */
+      padding: 10px;
+    }
+  
+    .profile-pic {
+      width: 150px; /* Adjust size for smaller screens */
+      height: 150px;
+      margin-bottom: 15px; /* Adjust margin for spacing */
+    }
+  
+    .about-text h2 {
+      font-size: 1.8em;
+    }
+  
+    .about-text p {
+      font-size: 1em;
+    }
   }
   

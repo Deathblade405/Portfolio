@@ -1,36 +1,46 @@
+/* Header Styles */
 header {
-    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
-    padding: 20px 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    padding: 10px 0; /* Reduced padding */
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,255,255,0.6);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.6);
     animation: slideInFromTop 1s ease-out;
+    display: flex;
+    justify-content: center;
   }
   
+  /* Header Container Styles */
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%; /* Ensure full width */
     padding: 0 20px;
+    box-sizing: border-box;
   }
   
+  /* Header Title Styles */
   h1 {
     color: #00f9ff;
-    font-size: 2.8em;
+    font-size: 2.4em; /* Adjusted for better visibility */
     font-family: 'Press Start 2P', cursive;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
     animation: bounceIn 1s ease-out;
+    margin: 0;
   }
   
+  /* Navigation Styles */
   nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
   }
   
   nav ul li {
@@ -39,14 +49,16 @@ header {
   
   nav ul li a {
     color: #f0f0f0;
-    font-size: 1.4em;
+    font-size: 1.2em;
     position: relative;
     padding: 5px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Press Start 2P', cursive;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
+  /* Navigation Link Hover Effect */
   nav ul li a::before {
     content: '';
     position: absolute;
@@ -63,7 +75,29 @@ header {
   }
   
   nav ul li a:hover {
-    animation: rotate 1s linear infinite;
+    color: #ff007f;
     transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.8);
+    animation: rotate 1s linear infinite;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 0; /* Adjusted for smaller screens */
+    }
+  
+    h1 {
+      font-size: 1.8em; /* Reduced font size for mobile */
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 5px 0; /* Adjust spacing for mobile */
+    }
   }
   

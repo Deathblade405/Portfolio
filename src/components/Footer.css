@@ -52,3 +52,23 @@
     text-shadow: 0 0 10px #ff007f;
   }
   
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .footer-section {
+      padding: 30px;
+    }
+  
+    .footer-section h2 {
+      font-size: 1.8em;
+    }
+  
+    .social-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .social-links a {
+      font-size: 1.2em;
+    }
+  }
+  

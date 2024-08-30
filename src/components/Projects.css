@@ -22,6 +22,7 @@
     justify-content: center;
   }
   
+  /* Ensure cards are responsive */
   .project-card {
     background: linear-gradient(135deg, #222, #444);
     color: #e0e0e0;
@@ -72,5 +73,26 @@
   
   .project-card:hover p {
     opacity: 0.8;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .projects-section {
+      padding: 30px;
+    }
+  
+    .projects-section h2 {
+      font-size: 2em;
+    }
+  
+    .projects-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project-card {
+      min-width: 200px;
+      max-width: 90%;
+    }
   }
   

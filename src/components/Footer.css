@@ -1,0 +1,54 @@
+.footer-section {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+    padding: 50px;
+    color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -4px 20px rgba(0,255,255,0.6);
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #00f9ff;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: #00f9ff;
+    margin: 0 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .social-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #00f9ff;
+    transition: width 0.3s ease;
+  }
+  
+  .social-links a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  
+  .social-links a:hover {
+    color: #ff007f;
+    transform: scale(1.2) rotate(5deg);
+    text-shadow: 0 0 10px #ff007f;
+  }
+  
